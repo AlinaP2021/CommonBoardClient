@@ -59,7 +59,7 @@ public class Controller {
 
     protected boolean isValidMessage(String message) {
         if (message != null &&
-                message.matches("([0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2};(move|start);([0-1]{1}[.,][0-9]+;){2}-?[0-9]+")) {
+                message.matches("([0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2};(move|start);((0[.,][0-9]+|1[.,]0+);){2}-?[0-9]+")) {
             return true;
         }
         return false;
